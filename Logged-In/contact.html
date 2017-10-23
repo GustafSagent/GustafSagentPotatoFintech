@@ -15,6 +15,11 @@
 
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -59,10 +64,10 @@
               Log out
             </a>
           </div>
-            </div>
-          </li>
-        </ul>
       </div>
+      </li>
+      </ul>
+    </div>
     </div>
   </nav>
 
@@ -191,6 +196,7 @@
 
       var modalC = document.getElementById("myModalConfirmation");
 
+      var spanC = document.getElementsByClassName("closeC")[0];
       // When the user clicks the button, open the modal
       btn.onclick = function() {
         modal.style.display = "block";
@@ -216,6 +222,11 @@
       }
       okBtn.onclick = function() {
         modalC.style.display = "none";
+      }
+
+      spanC.onclick = function() {
+        modalC.style.display = "none";
+
       }
 
 
