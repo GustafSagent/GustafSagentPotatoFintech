@@ -10,6 +10,7 @@
 
   <title>Split - Potato FinTech CityU Hong Kong CS3382 Group 21</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Bootstrap core CSS -->
 
@@ -19,6 +20,7 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
   <link href="css/contacts.css" rel="stylesheet">
+  <link href="css/splitCustom.css" rel="stylesheet">
   <link rel="icon" href="..\img\favicon3.png">
 
 
@@ -110,8 +112,10 @@
         <small> - Manage your current splits and make new ones</small>
       </h1>
 
-
-
+    <a id="helpButton" href="#" data-toggle="popover" data-trigger="focus" title="Here are some tips:" data-content="The split function is made for you to be able to easy split expenses with your friends.Just
+    choose the friends you want to spend it with, press the split button to fill in the amount, then they will get a message on their site and with only one click they can pay you back the amount that they are owe.">
+      Help!
+    </a>
 
     <div class="list-groups" id="whole-contactbox">
       <div class="list-group" id="contact-headAndInfo">
@@ -319,6 +323,11 @@
           modalC.style.display = "none";
         }
       }
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle="popover"]').popover();
+      });
     </script>
 
 

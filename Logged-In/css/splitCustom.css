@@ -1,0 +1,7 @@
+#helpButton {
+  padding: 10px;
+  font-weight: bolder;
+  text-decoration: underline;
+  padding-top: 5px;
+  transform: scale(1.5);
+}
