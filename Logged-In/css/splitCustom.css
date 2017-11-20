@@ -3,3 +3,12 @@
   font-weight: bolder;
   text-decoration: underline;
 }
+
+label {
+  text-decoration: none;
+  margin-bottom: 0px;
+}
+
+label:hover {
+  cursor: pointer;
+}
