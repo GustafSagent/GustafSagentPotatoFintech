@@ -2,6 +2,34 @@
   padding: 10px;
   font-weight: bolder;
   text-decoration: underline;
-  padding-top: 5px;
-  transform: scale(1.5);
+}
+
+label {
+  text-decoration: none;
+  margin-bottom: 0px;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.number-class:hover {
+  cursor: pointer;
+}
+
+.splitButtons {
+  width: 200px;
+  border-radius: 7px;
+  background: #ffce6c;
+  text-decoration: center;
+  border: none;
+  color: #180e68;
+  margin-top: 0px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  outline: none;
+  font-size: 13px;
+  border-bottom: 3px solid #180e68;
+  cursor: pointer;
+  padding-right: 0px;
 }
