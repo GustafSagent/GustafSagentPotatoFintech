@@ -25,7 +25,7 @@
 }
 
 #whole-contactbox {
-  width: 60%;
+  width: 100%;
   min-width: 475px;
 }
 
@@ -59,7 +59,7 @@ input[type=checkbox] {
   text-decoration: center;
   border: none;
   color: #180e68;
-  margin-top: 0px;
+  margin-top: -20px;
   padding-top: 14px;
   padding-bottom: 14px;
   outline: none;
