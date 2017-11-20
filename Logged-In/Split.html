@@ -177,9 +177,8 @@
         </a>
 
         <div class="contacts-wrapper" id="contacts-wrapper">
-          <a href="#" data-toggle="modal" data-target="#myModalConfirmation" class="list-group-item">
 
-            <a class="list-group-item">Johan Ormsjo<p  class="number-class" href="#" >Pay</p><p  style="color:red;" class="anumber-class" >100HKD</p></a>
+          <a class="list-group-item">Johan Ormsjo<p  class="number-class" href="#" data-toggle="modal" data-target="#myPayModalSplit" >Pay</p><p  style="color:red;" class="anumber-class" >100HKD</p></a>
           <a class="list-group-item">Kevin Wong<p  class="number-class" href="#" >Remind</p><p  style="color:green;" class="anumber-class" >300HKD</p></a>
           <a class="list-group-item">Gill Bates <p  class="number-class" href="#" >Remind</p><p  style="color:green;" class="anumber-class" >400HKD</p></a>
           <a class="list-group-item">Jesper Hedlund<p class="number-class" href="#" >Remind</p><p  style="color:green;" class="anumber-class" >140HKD</p></a>
@@ -230,7 +229,7 @@
         </div>
         <div class="modal-footer">
           <div style="text-align:center;">
-            <button id="mySubmitBtn">Confirm</button>
+            <button class="splitButtons" id="mySubmitBtn">Confirm</button>
           </div>
         </div>
       </div>
@@ -255,7 +254,63 @@
         </div>
         <div class="modal-footer-comfirmation">
           <div style="text-align:center;">
-            <button id="okButton">OK</button>
+            <button class="splitButtons" id="okButton">OK</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="myPayModalSplit" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content" id="modal-content-Confirmation">
+        <div class="modal-header">
+          <h2>Enter password</h2>
+          <span class="closePay">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="Confirm-box">
+          </div>
+          <label>Enter your pin and press "Pay" to pay back
+          </label>
+          <br>
+
+          <label for="pin">PIN:</label>
+          <input id="userPassword" type="password" required>
+
+
+        </div>
+        <div class="modal-footer-comfirmation">
+          <div style="text-align:center;">
+            <button class="splitButtons" id="okPayButton">Pay</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="myPayBackModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content" id="modal-content-Confirmation">
+        <div class="modal-header">
+          <h2>Payment confirmed</h2>
+          <span class="closeC" id="closePayTrans">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="Confirm-box">
+            <label for="paymok">You payed Johan 100HKd  <br /> Your debt is settled </label>
+
+            <p id="checkMark">&#10004;</p>
+          </div>
+
+        </div>
+        <div class="modal-footer-comfirmation">
+          <div style="text-align:center;">
+
+
+            <button class="splitButtons" id="okButton2">OK</button>
           </div>
         </div>
       </div>
@@ -284,6 +339,17 @@
 
       var modalC = document.getElementById("myModalConfirmation");
 
+      var modalPay = document.getElementById("myPayModalSplit");
+
+      var payButton = document.getElementById("okPayButton");
+
+      var closePaySpan = document.getElementsByClassName("closePay")[0];
+
+      var modalPayBack = document.getElementById("myPayBackModal")
+
+      var okBtnPayBack = document.getElementById('okButton2');
+
+
       // When the user clicks the button, open the modal
       btn.onclick = function() {
         modal.style.display = "block";
@@ -311,6 +377,20 @@
         modalC.style.display = "none";
       }
 
+      closePaySpan.onclick = function() {
+        myPayModalSplit.style.display = "none";
+      }
+
+      payButton.onclick = function() {
+        myPayModalSplit.style.display = "none";
+        myPayBackModal.style.display = "block";
+      }
+
+      okBtnPayBack.onclick = function() {
+        myPayBackModal.style.display = "none";
+      }
+
+
 
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
@@ -318,6 +398,7 @@
           modal.style.display = "none";
         }
       }
+
 
       window.onclick = function(event) {
         if (event.target == modalC) {
