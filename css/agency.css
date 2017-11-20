@@ -13,6 +13,7 @@ section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;m
 img::selection{background:transparent;}
 img::-moz-selection{background:transparent;}
 body{-webkit-tap-highlight-color:#fed136;}
+#navbarPic{height: 40px; margin-right: 10px;}
 #mainNav{background-color:#22222;}
 #mainNav .navbar-toggler{font-size:12px;right:0;padding:15px;text-transform:uppercase;color:white;border:0;background-color:#fed136;font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;text-transform:uppercase;}
 #mainNav .navbar-brand{color:#ffffff;font-family:'Avenir', 'Helvetica Neue', Helvetica, Arial, cursive;text-decoration:underline;}
