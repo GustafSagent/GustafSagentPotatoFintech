@@ -259,6 +259,23 @@ label[for=paym] {
   height: 100px;
 }
 
+.contactButtons {
+  width: 200px;
+  border-radius: 7px;
+  background: #ffce6c;
+  text-decoration: center;
+  border: none;
+  color: #180e68;
+  margin-top: 0px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  outline: none;
+  font-size: 13px;
+  border-bottom: 3px solid #180e68;
+  cursor: pointer;
+  padding-right: 0px;
+}
+
 @media (max-width: 768px) {
   #contact-headAndInfo.list-group {
     width: 100%;
